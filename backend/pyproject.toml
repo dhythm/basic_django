@@ -1,14 +1,13 @@
 [tool.poetry]
-name = "basic-django"
+name = "backend"
 version = "0.1.0"
 description = ""
 authors = ["dhythm <yuta.okada.20@gmail.com>"]
 readme = "README.md"
-packages = [{include = "basic_django"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^4.1.7"
+django = "^4.1.7"
 
 
 [tool.poetry.group.dev.dependencies]
