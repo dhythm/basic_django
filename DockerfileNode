@@ -9,7 +9,9 @@ RUN npm run build
 FROM node:18 as runner
 WORKDIR /app
 
+COPY --from=builder /app/package.json /app/package-lock.json .
 COPY --from=builder /app/build ./build
+RUN npm install --only=prod
 
 EXPOSE 3000
-CMD ["npx", "serve", "build"]
+CMD ["npx", "-y", "serve", "build"]
