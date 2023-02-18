@@ -10,6 +10,7 @@ python = "^3.9"
 django = "^4.1.7"
 djangorestframework = "^3.14.0"
 pygments = "^2.14.0"
+django-cors-headers = "^3.13.0"
 
 
 [tool.poetry.group.dev.dependencies]

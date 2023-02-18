@@ -11,6 +11,7 @@ poetry install
 
 poetry add Django
 poetry add djangorestframework
+poetry add django-cors-headers
 poetry run django-admin startproject basic_django .
 
 poetry add --dev black pylint
