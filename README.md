@@ -20,6 +20,14 @@ poetry run python manage.py migrate
 poetry run python manage.py runserver
 ```
 
+## Adding API endpoint
+
+```sh
+poetry run python manage.py startapp foo
+poetry run python manage.py makemigrations
+poetry run python manage.py migrate
+```
+
 ## Getting started
 
 ```sh
