@@ -1,4 +1,4 @@
-FROM python:3.9 AS builder
+FROM python:3.9
 
 ARG DJANGO_ENV
 
@@ -31,8 +31,13 @@ RUN apt-get update \
 
 WORKDIR /app
 
-COPY pyproject.toml poetry.lock /app/
-
+COPY ./backend/pyproject.toml ./backend/poetry.lock /app/
 RUN poetry install
 
-COPY . .
+COPY ./backend/manage.py /app/
+
+RUN poetry run python manage.py
+COPY ./backend/db.sqlite3 /app/
+
+COPY ./backend/api /app/api
+

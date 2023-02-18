@@ -32,5 +32,8 @@ npm run start
 ```sh
 docker-compose build
 
+docker-compose run -d
+docker-compose down
+
 docker run -p 3000:3000 -d basic_django-web_front
 ```
