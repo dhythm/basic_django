@@ -10,6 +10,7 @@ poetry init
 poetry install
 
 poetry add Django
+poetry add djangorestframework
 poetry run django-admin startproject basic_django .
 
 poetry add --dev black pylint

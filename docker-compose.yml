@@ -13,7 +13,6 @@ services:
       - 8000:8000
   web_front:
     container_name: django_web_front
-      #command: "npx serve build"
     working_dir: /app
     build:
       context: .

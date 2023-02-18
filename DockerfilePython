@@ -35,9 +35,5 @@ COPY ./backend/pyproject.toml ./backend/poetry.lock /app/
 RUN poetry install
 
 COPY ./backend/manage.py /app/
-
 RUN poetry run python manage.py
-COPY ./backend/db.sqlite3 /app/
-
-COPY ./backend/api /app/api
-
+COPY ./backend/ /app/
